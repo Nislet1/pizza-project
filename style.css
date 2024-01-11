@@ -1,0 +1,345 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(180deg, rgba(232, 232, 232, 0.49) -527.83%, #E8E8E8 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#totalPrice{
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    color: #9A9A9A;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;                                           
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+}
+
+.pizza-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pizza-name button{
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: #F2F2F2;
+
+    color: #9A9A9A;
+    font-family: 'Inter', sans-serif;                                           
+    font-style: 10px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+    text-transform: capitalize;
+
+    border: none;
+
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+#rename-input{
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: #F2F2F2;
+
+    color: #9A9A9A;
+    font-family: 'Inter', sans-serif;                                           
+    font-style: 10px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+    text-transform: capitalize;
+
+    outline: none;
+    border: 2.5px solid #9a9a9aab;
+}
+
+.pizza-name h1{
+    font-family: 'Inter', sans-serif;                              
+    font-size: 128px;
+    font-weight: 700;
+    letter-spacing: -8.96px;
+    text-transform: uppercase;
+    width: 100%;
+
+    background: linear-gradient(180deg, #444 0%, rgba(68, 68, 68, 0.30) 163.02%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.all{
+    margin: 0 40px;
+}
+
+.rec{
+    width: 130px;
+    height: 130px;
+    margin-bottom: 10px;
+    margin: 0 auto 10px;
+    background-color: #D9D9D9;
+    /* background-image:
+    url('assets/26d170b64a6719d3b934329a8a37f929_3011777119 1.svg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border: 4px solid #9a9a9aab;
+
+    position: relative;
+
+    transition: all 1s;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.rec img{
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.rec:hover p{
+    transform: translateY(20px);
+    opacity: 0;
+
+
+}
+.rec:hover .lineaire{
+    opacity: 0;
+
+}
+.rec:hover img{
+    transform: scale(1.2) rotate(180deg);
+    z-index: 0;
+}
+
+.lineaire{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    transition: all 250ms ease-in-out ;
+    border-bottom-left-radius: 6px ;
+    border-bottom-right-radius: 6px;
+    background : linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.24));
+}
+
+
+.pizza{
+    z-index: -1;
+    /* transform: translateY(-25px); */
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+
+.fullpizza:hover{
+    transform: rotate3d(0, 0, 0, 0deg) translateY(-40px);
+
+}
+
+.itemslist{
+    transform: translateY(-4rem);
+    height: 680px;
+    overflow-y: scroll;  
+}
+.itemslist::-webkit-scrollbar {
+    display: none;
+}
+
+
+.rec p{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.77px;
+    text-transform: uppercase;
+    margin: 0;
+    text-transform: uppercase;
+
+    line-height: 18px;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+
+
+    /* width: 100%;
+    height: 50px; 
+    background : linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.24));
+    border-bottom-left-radius: 10px ; 
+    border-bottom-right-radius: 10px ; */
+
+}
+
+@keyframes popup {
+    0% {transform: scale(1);}
+    70% { transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+/* .rec lord-icon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    color: #ff2600;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+    animation: popup 500ms;
+
+} */
+
+/* .rec:hover i{
+    transform: translateY(20px);
+    opacity: 0;
+
+} */
+
+.sauce{
+    position: absolute;
+    transform: scale(1.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 53%;
+
+    
+}
+
+@keyframes item {
+    0% {
+        opacity: 0;
+        width: 1000px;
+        
+    }
+    100% {
+        opacity: 1;
+        width: 570px;
+        
+    }
+}
+.paprika{
+    position: absolute;
+    width: 570px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: item 1s; */
+    animation: item 1s normal forwards ease-in-out;
+}
+
+.fullpizza{
+    position: relative;
+    /* transition: rotation 250ms ease-in-out; */
+    transition: all 1s ease-in-out ;
+    transform: rotate3d(1, 0, 0, 50deg) translateY(-100px);
+}
+
+.size1{
+    transform: scale(1.2);
+}
+.size2{
+    transform: scale(1);
+}
+.size3{
+    transform: scale(0.5);
+}
+
+.btns{
+    position: relative;
+    height:60px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-40px);
+    width: 346px;
+}
+
+
+.btn1{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-9px);
+}
+.btn2{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%) translateY(20px);
+    top: 50%;
+    bottom: 50%;
+    z-index: 1;
+}
+.btn3{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-9px);
+}
+
+
+.btns button{
+    width: 62px;
+    outline: none;
+    border: none;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+    background : linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.24)),
+    white;
+    /* border: 4px solid #9a9a9aab; */
+}
+
+.btns svg{
+z-index: -1;
+stroke-width: 14px;
+stroke: rgba(0, 0, 0, 0.377);
+}
+
+
+@keyframes removeAnimation {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.removing {
+    animation: removeAnimation 500ms ease-in-out;
+}
+
+.prix{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: green;
+    text-shadow: 0 0 10px green;
+}
